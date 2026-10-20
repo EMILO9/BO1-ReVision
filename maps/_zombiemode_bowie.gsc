@@ -77,7 +77,7 @@ bowie_think(cost)
 		if( player HasWeapon( "karambit_primary_zm" ) )
 		{
 			play_sound_on_ent( "no_purchase" );
-			wait( 0.5 );
+			wait( 0.1 );
 			continue;
 		}
 

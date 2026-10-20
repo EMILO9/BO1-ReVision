@@ -20,6 +20,24 @@ init()
 	level._zombiemode_check_firesale_loc_valid_func = ::default_check_firesale_loc_valid_func;
 }
 
+// ReVision - true only if buying a weapon right now would take away the karambit
+would_replace_karambit()
+{
+	if( self GetCurrentWeapon() != "karambit_primary_zm" )
+	{
+		return false;
+	}
+
+	weapon_limit = 3; // keep in sync with weapon_give / treasure_chest_give_weapon
+	if( self HasPerk( "specialty_additionalprimaryweapon" ) )
+	{
+		weapon_limit = 4;
+	}
+
+	primaryWeapons = self GetWeaponsListPrimaries();
+	return ( primaryWeapons.size >= weapon_limit );
+}
+
 default_check_firesale_loc_valid_func()
 {
 	return true;
@@ -1211,14 +1229,14 @@ treasure_chest_think()
 				wait( 0.1 );
 				continue;
 			}
-
-			// ReVision - Added this to prevent taking weapon from mysterybox when karambit is equipped
-		    if ( grabber == user && user GetCurrentWeapon() == "karambit_primary_zm" )
-		    {
-			play_sound_on_ent( "no_purchase" );
-			wait( 0.1 );
-			continue;
-		    }
+			
+			// ReVision - only block taking the box weapon if it would replace the karambit
+			if ( grabber == user && user would_replace_karambit() )
+			{
+				play_sound_on_ent( "no_purchase" );
+				wait( 0.1 );
+				continue;
+			}
 
 			if(grabber != level && (IsDefined(self.box_rerespun) && self.box_rerespun))
 			{
@@ -2691,9 +2709,9 @@ weapon_spawn_think()
 
 		if( !player_has_weapon )
 		{
-			// ReVision - Prevent player from buying wall weapon while having karambit equipped
-			current_wpn = player GetCurrentWeapon();
-			if (current_wpn == "karambit_primary_zm") {
+			// ReVision - only block taking the weapon if it would replace the karambit
+			if( player would_replace_karambit() )
+			{
 				play_sound_on_ent( "no_purchase" );
 				wait( 0.5 );
 				continue;
