@@ -1,0 +1,6 @@
+stringtable,mp/zombiemode.csv
+rawfile,maps/_loadout.gsc
+rawfile,maps/_zombiemode_weapons.gsc
+rawfile,maps/_zombiemode_bowie.gsc
+weapon,sp/karambit_melee_zm
+weapon,sp/karambit_primary_zm

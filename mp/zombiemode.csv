@@ -22,7 +22,7 @@ penalty_died,0.05,0.05,0.05,0.05,
 penalty_downed,0.0,0.0,0.0,0.0,
 starting_lives,0,0,0,0,
 
-zombie_score_start_1p,3500,350000,3500,3500,
+zombie_score_start_1p,3500,3500000,3500,3500,
 zombie_score_start_2p,3500,3500,3500,3500,
 zombie_score_start_3p,3500,3500,3500,3500,
 zombie_score_start_4p,3500,3500,3500,3500,
