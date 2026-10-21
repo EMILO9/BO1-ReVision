@@ -308,7 +308,11 @@ init_weapons()
  	add_zombie_weapon( "freezegun_zm",				"freezegun_upgraded_zm",				&"ZOMBIE_WEAPON_FREEZEGUN", 			10,		"freezegun",		"",		undefined );
  	add_zombie_weapon( "zombie_black_hole_bomb",		undefined,								&"ZOMBIE_WEAPON_SATCHEL_2000", 			2000,	"gersh",			"",		undefined );
  	add_zombie_weapon( "zombie_nesting_dolls",		undefined,								&"ZOMBIE_WEAPON_NESTING_DOLLS", 		2000,	"dolls",	"",		undefined );
-
+	
+	//ReVision - Custom weapons
+	add_zombie_weapon( "karambit_primary_zm",		"karambit_primary_upgraded_zm",								&"ZOMBIE_WEAPON_KNIFE_BALLISTIC", 		10,	"bowie",	"",		undefined );
+	add_zombie_weapon( "karambit_primary_upgraded_zm",		undefined,								&"ZOMBIE_WEAPON_KNIFE_BALLISTIC", 		10,	"bowie",	"",		undefined );
+	
 	if(IsDefined(level._zombie_custom_add_weapons))
 	{
 		[[level._zombie_custom_add_weapons]]();

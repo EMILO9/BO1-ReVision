@@ -117,7 +117,7 @@ sickle_think(cost)
  			continue;
  		}
 
-		// ReVision - Added this to prevent buying bowie
+		// ReVision - Added this to prevent buying sickle
 		if( player HasWeapon( "karambit_primary_zm" ) )
 		{
 			play_sound_on_ent( "no_purchase" );
