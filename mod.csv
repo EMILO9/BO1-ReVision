@@ -1,6 +1,9 @@
 //STRINGTABLE
 stringtable,mp/zombiemode.csv
 
+//SOUNDS
+sound,revision
+
 //COMMON
 rawfile,maps/_loadout.gsc
 rawfile,maps/_zombiemode_weapons.gsc
@@ -10,6 +13,7 @@ rawfile,maps/_zombiemode.gsc
 rawfile,maps/_zombiemode_perks.gsc
 rawfile,maps/_zombiemode_ai_thief.gsc
 rawfile,maps/_zombiemode_weap_quantum_bomb.gsc
+rawfile,maps/_zombiemode_powerups.gsc
 
 //THEATRE
 rawfile,maps/zombie_theater.gsc
@@ -19,3 +23,15 @@ rawfile,clientscripts/zombie_theater.csc
 weapon,sp/karambit_melee_zm
 weapon,sp/karambit_primary_zm
 weapon,sp/karambit_primary_upgraded_zm
+
+// Deadshot Machine Models
+xmodel,zombie_vending_ads
+xmodel,zombie_vending_ads_on
+xmodel,zombie_3rd_perk_bottle_ads
+
+// Drinking Bottle Weapon
+weapon,sp/zombie_perk_bottle_deadshot
+
+// HUD Icon & Effects
+material,specialty_ads_zombies
+fx,misc/fx_zombie_cola_dtap_on

@@ -1166,22 +1166,23 @@ vending_trigger_think()
 	self UseTriggerRequireLookAt();
 
 	cost = level.zombie_vars["zombie_perk_cost"];
+	//ReVision - Changed perk cost
 	switch( perk )
 	{
 	case "specialty_armorvest_upgrade":
 	case "specialty_armorvest":
-		cost = 2500;
+		cost = 3000;
 		break;
 
 	case "specialty_quickrevive_upgrade":
 	case "specialty_quickrevive":
 		if( solo )
 		{
-			cost = 500;
+			cost = 1500;
 		}
 		else
 		{
-			cost = 1500;
+			cost = 3000;
 		}
 		break;
 
@@ -1192,27 +1193,27 @@ vending_trigger_think()
 
 	case "specialty_rof_upgrade":
 	case "specialty_rof":
-		cost = 2000;
+		cost = 3000;
 		break;
 		
 	case "specialty_longersprint_upgrade":
 	case "specialty_longersprint":
-		cost = 2000;
+		cost = 3000;
 		break;
 		
 	case "specialty_flakjacket_upgrade":
 	case "specialty_flakjacket":
-		cost = 2000;
+		cost = 3000;
 		break;
 		
 	case "specialty_deadshot_upgrade":
 	case "specialty_deadshot":
-		cost = 1000; // WW (02-03-11): Setting this low at first so more people buy it and try it (TEMP)
+		cost = 3000; // WW (02-03-11): Setting this low at first so more people buy it and try it (TEMP)
 		break;
 		
 	case "specialty_additionalprimaryweapon_upgrade":
 	case "specialty_additionalprimaryweapon":
-		cost = 4000;
+		cost = 3000;
 		break;
 
 	}

@@ -9,6 +9,8 @@
 
 main()
 {
+	//ReVision - Double tap 2.0
+	SetDvar( "perk_weapRateEnhanced", "1" );
 	level.player_too_many_weapons_monitor = true;
 	level.player_too_many_weapons_monitor_func = ::player_too_many_weapons_monitor;
 	level._dontInitNotifyMessage = 1;
@@ -327,11 +329,11 @@ init_deadshot_machine_locations()
 {
     switch ( Tolower( GetDvar( #"mapname" ) ) )
     {
-    case "zombie_theater": // Kino der Toten (60 units to the LEFT of Mule Kick)
-        level.zombie_deadshot_machine_origin = (1172.4, -419.7, 320);
-        level.zombie_deadshot_machine_angles = (0, 90, 0);
-        level.zombie_deadshot_machine_clip_origin = (1160, -420, 448);
-        level.zombie_deadshot_machine_clip_angles = (0, 0, 0);
+    case "zombie_theater":
+        level.zombie_deadshot_machine_origin = (824, 1188, -15);
+        level.zombie_deadshot_machine_angles = (0, 270, 0);
+        level.zombie_deadshot_machine_clip_origin = (824, 1188, -15);
+        level.zombie_deadshot_machine_clip_angles = (0, 270, 0);
         break;
     case "zombie_pentagon":
         break;
