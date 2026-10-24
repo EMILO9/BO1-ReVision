@@ -125,6 +125,8 @@ place_additionalprimaryweapon_machine()
 	machine_trigger.targetname = "zombie_vending";
 	machine_trigger.target = "vending_additionalprimaryweapon";
 	machine_trigger.script_noteworthy = "specialty_additionalprimaryweapon";
+	machine_trigger.script_sound = "mus_perks_mulekick_jingle";
+    machine_trigger.script_label = "mus_perks_mulekick_sting";
 
 	if ( isdefined( level.zombie_additionalprimaryweapon_machine_clip_origin ) )
 	{
@@ -176,6 +178,9 @@ place_deadshot_machine()
     machine_trigger.targetname = "zombie_vending";
     machine_trigger.target = "vending_deadshot";
     machine_trigger.script_noteworthy = "specialty_deadshot";
+	machine_trigger.script_sound = "mus_perks_deadshot_jingle";
+    machine_trigger.script_label = "mus_perks_deadshot_sting";
+
 
     if ( isdefined( level.zombie_deadshot_machine_clip_origin ) )
     {
@@ -1433,7 +1438,7 @@ vending_trigger_think()
 			break;
 		}
 		
-		self thread maps\_zombiemode_audio::play_jingle_or_stinger (self.script_label);
+		self thread maps\_zombiemode_audio::play_jingle_or_stinger (sound);
 	
 		//		self waittill("sound_done");
 

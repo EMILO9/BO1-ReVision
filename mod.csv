@@ -1,6 +1,12 @@
 //STRINGTABLE
 stringtable,mp/zombiemode.csv
 
+//STRINGS
+localize,revision
+
+//TEST
+menufile,ui/levels.menu
+
 //SOUNDS
 sound,revision
 
